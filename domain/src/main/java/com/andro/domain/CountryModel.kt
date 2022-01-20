@@ -1,4 +1,6 @@
 package com.andro.domain
 
-class MyClass {
-}
+data class CountryModel(
+    val countryIcon: String,
+    val countryName: String
+)

@@ -3,8 +3,24 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
     }
 }
 rootProject.name = "jetpack_sample"
+
+// start
 include ':app'
+
+//features
+include ':ui_common'
+include ':features:home'
+include ':features:rules'
+include ':features:main'
+
+// domain
+include ':domain'
+//include ':domain_core'
+
+// data
+include ':data'
+//include ':preferenses'
+//include ':database'

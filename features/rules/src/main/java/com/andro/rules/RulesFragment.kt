@@ -1,4 +1,4 @@
-package com.andro.main
+package com.andro.rules
 
 import android.os.Bundle
 import android.view.LayoutInflater

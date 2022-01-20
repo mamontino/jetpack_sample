@@ -17,12 +17,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 
+@Preview
 @Composable
 fun MoveBoxWhereTapped() {
     // Creates an `Animatable` to animate Offset and `remember` it.
@@ -32,7 +34,9 @@ fun MoveBoxWhereTapped() {
 
     Box(
         // The pointerInput modifier takes a suspend block of code
-        Modifier.fillMaxSize().pointerInput(Unit) {
+        modifier = Modifier
+            .fillMaxSize()
+            .pointerInput(Unit) {
             // Create a new CoroutineScope to be able to create new
             // coroutines inside a suspend function
             coroutineScope {
@@ -53,7 +57,7 @@ fun MoveBoxWhereTapped() {
     ) {
         Text("Tap anywhere", Modifier.align(Alignment.Center))
         Box(
-            Modifier
+            modifier = Modifier
                 .offset {
                     // Use the animated offset as the offset of this Box
                     IntOffset(

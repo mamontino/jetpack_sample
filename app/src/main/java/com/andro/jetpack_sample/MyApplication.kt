@@ -1,4 +1,8 @@
 package com.andro.jetpack_sample
 
-class MyApplication {
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class MyApplication : Application() {
 }

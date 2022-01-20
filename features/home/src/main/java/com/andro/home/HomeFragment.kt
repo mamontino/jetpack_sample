@@ -1,13 +1,12 @@
-package com.andro.data
+package com.andro.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
-import com.andro.ui_common.ComplexComposeContent
+import com.andro.domain.CountryInteractor
 
 class HomeFragment : Fragment() {
 
@@ -17,7 +16,8 @@ class HomeFragment : Fragment() {
     ): View {
         return ComposeView(requireContext()).apply {
             setContent {
-                ComplexComposeContent()
+                val coutryList = CountryInteractor().getCountryList()
+                CountryList(list = coutryList, onSelectionChange = {})
             }
         }
     }

@@ -1,4 +1,4 @@
-package com.andro.data
+package com.andro.rules
 
 import org.junit.Test
 
