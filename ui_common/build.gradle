@@ -1,0 +1,56 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    buildFeatures {
+        viewBinding true
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.1.0-beta04"
+        kotlinCompilerVersion '1.6.0'
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api "androidx.compose.compiler:compiler:1.0.5"
+    api 'androidx.core:core-ktx:1.7.0'
+    api 'androidx.appcompat:appcompat:1.4.0'
+    api 'com.google.android.material:material:1.4.0'
+    api 'androidx.constraintlayout:constraintlayout:2.1.2'
+    api "androidx.compose.ui:ui:1.1.0-beta04"
+    api "androidx.compose.ui:ui-tooling:1.0.5"
+    api "androidx.compose.material:material:1.1.0-beta04"
+    api "androidx.compose.ui:ui-tooling-preview:1.1.0-beta04"
+    api 'androidx.activity:activity-compose:1.4.0'
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
+    api 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
+    api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+}
