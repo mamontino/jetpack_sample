@@ -1,3 +1,5 @@
 <resources>
     <string name="key">jetpack_sample</string>
+    <string name="app_name">Jetpack</string>
+    <string name="action_settings">settings</string>
 </resources>
