@@ -1,8 +1,15 @@
 package com.andro.domain
 
-class CountryInteractor {
+import javax.inject.Inject
 
-    fun getCountryList() : List<CountryModel> =
+class CountryInteractor @Inject constructor(
+    private val apiRepository: ApiRepository
+) {
+
+    suspend fun getEmployeeList() : List<EmployeeModel> =
+        apiRepository.getEmployees()
+
+    fun getCountryList(): List<CountryModel> =
         listOf(
             CountryModel("https://popperssu.ru/wp-content/uploads/Russia-Flag-PNG-Pic.png", "Country"),
             CountryModel("https://popperssu.ru/wp-content/uploads/Russia-Flag-PNG-Pic.png", "Country"),
@@ -114,3 +121,7 @@ class CountryInteractor {
             CountryModel("https://popperssu.ru/wp-content/uploads/Russia-Flag-PNG-Pic.png", "Country"),
         )
 }
+
+data class EmployeeModel(
+    val id: Int
+)

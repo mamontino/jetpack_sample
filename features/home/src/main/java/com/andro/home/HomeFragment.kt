@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
-import com.andro.domain.CountryInteractor
 
 class HomeFragment : Fragment() {
 
@@ -16,8 +15,8 @@ class HomeFragment : Fragment() {
     ): View {
         return ComposeView(requireContext()).apply {
             setContent {
-                val coutryList = CountryInteractor().getCountryList()
-                CountryList(list = coutryList, onSelectionChange = {})
+//                val coutryList = CountryInteractor().getCountryList()
+//                CountryList(list = coutryList, onSelectionChange = {})
             }
         }
     }
