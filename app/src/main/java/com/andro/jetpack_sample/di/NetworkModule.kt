@@ -4,6 +4,7 @@ import com.andro.data.ApiRepositoryImpl
 import com.andro.data.ApiService
 import com.andro.domain.ApiRepository
 import com.andro.jetpack_sample.BuildConfig
+import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -39,6 +40,7 @@ object NetworkModule {
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient, BASE_URL: String): Retrofit = Retrofit.Builder()
         .addConverterFactory(GsonConverterFactory.create())
+        .addCallAdapterFactory(CoroutineCallAdapterFactory())
         .baseUrl(BASE_URL)
         .client(okHttpClient)
         .build()
