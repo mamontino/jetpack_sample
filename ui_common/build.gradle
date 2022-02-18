@@ -40,16 +40,20 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api "androidx.compose.compiler:compiler:1.0.5"
+    api "androidx.compose.compiler:compiler:1.1.0"
     api 'androidx.appcompat:appcompat:1.4.1'
     api 'com.google.android.material:material:1.5.0'
-    api "androidx.compose.ui:ui:1.2.0-alpha01"
-    api "androidx.compose.ui:ui-tooling:1.0.5"
-    api "androidx.compose.material:material:1.2.0-alpha01"
-    api "androidx.compose.ui:ui-tooling-preview:1.2.0-alpha01"
+    api "androidx.compose.ui:ui:1.2.0-alpha03"
+    api "androidx.compose.ui:ui-tooling:1.1.0"
+    api "androidx.compose.material:material:1.2.0-alpha03"
+    api "androidx.compose.ui:ui-tooling-preview:1.2.0-alpha03"
     api 'androidx.activity:activity-compose:1.4.0'
     api 'androidx.legacy:legacy-support-v4:1.0.0'
-    api 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
-    api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+    api 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
     api("io.coil-kt:coil-compose:1.4.0")
+    api "com.squareup.picasso:picasso:$picassoVersion"
+    api("com.github.bumptech.glide:glide:$glide") {
+        exclude group: "com.android.support"
+    }
 }

@@ -15,6 +15,9 @@ include ':ui_common'
 include ':features:home'
 include ':features:rules'
 include ':features:main'
+include ':features:login'
+include ':features:recipes'
+include ':features:details'
 
 // domain
 include ':domain'

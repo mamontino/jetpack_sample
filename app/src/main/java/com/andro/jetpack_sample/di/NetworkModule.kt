@@ -2,7 +2,9 @@ package com.andro.jetpack_sample.di
 
 import com.andro.data.ApiRepositoryImpl
 import com.andro.data.ApiService
+import com.andro.data.remote.RecipesService
 import com.andro.domain.ApiRepository
+import com.andro.jetpack_sample.BASE_URL
 import com.andro.jetpack_sample.BuildConfig
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import dagger.Module
@@ -20,13 +22,14 @@ import javax.inject.Singleton
 object NetworkModule {
 
     @Provides
-    fun provideBaseUrl() = "Constants.BASE_URL"
+    fun provideBaseUrl() = BASE_URL
 
     @Singleton
     @Provides
     fun provideOkHttpClient() = if (BuildConfig.DEBUG) {
         val loggingInterceptor = HttpLoggingInterceptor()
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
+
         OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
             .build()
@@ -47,7 +50,11 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideApiService(retrofit: Retrofit) = retrofit.create(ApiService::class.java)
+    fun provideApiService(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
+
+    @Provides
+    @Singleton
+    fun provideRecipeService(retrofit: Retrofit): RecipesService = retrofit.create(RecipesService::class.java)
 
     @Provides
     @Singleton

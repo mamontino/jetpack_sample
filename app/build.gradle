@@ -46,6 +46,9 @@ dependencies {
     implementation project(':features:home')
     implementation project(':features:rules')
     implementation project(':features:main')
+    implementation project(':features:login')
+    implementation project(':features:recipes')
+    implementation project(':features:details')
     implementation project(':domain')
     implementation project(':data')
 

@@ -3,11 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/app/src/main/res/drawable/background_splash.xml" value="0.16111111111111112" />
+        <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/app/src/main/res/font/roboto_bold.xml" value="0.16111111111111112" />
         <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/app/src/main/res/layout/activity_main.xml" value="0.1705282669138091" />
         <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/app/src/main/res/layout/fragment_home.xml" value="0.275" />
         <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/app/src/main/res/layout/list_fragment.xml" value="0.2609375" />
+        <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/app/src/main/res/layout/recipe_item.xml" value="0.275" />
+        <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/app/src/main/res/layout/splash_layout.xml" value="0.275" />
+        <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/app/src/main/res/menu/details_menu.xml" value="0.275" />
+        <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/app/src/main/res/menu/main_actions.xml" value="0.275" />
         <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/app/src/main/res/menu/menu_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/features/details/src/main/res/layout/details_layout.xml" value="0.275" />
+        <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/features/details/src/main/res/layout/recipe_item.xml" value="0.275" />
+        <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/features/details/src/main/res/menu/details_menu.xml" value="0.275" />
+        <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/features/login/src/main/res/layout/recipe_item.xml" value="0.275" />
+        <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/features/recipes/src/main/res/layout/recipe_item.xml" value="0.275" />
+        <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/features/recipes/src/main/res/menu/main_actions.xml" value="0.275" />
+        <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/features/splash/src/main/res/layout/recipe_item.xml" value="0.275" />
         <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/ui_common/src/main/res/drawable/ic_android.xml" value="0.15989583333333332" />
+        <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/ui_common/src/main/res/drawable/ic_sync_black_24dp.xml" value="0.15648148148148147" />
+        <entry key="..\:/Users/mamon/AndroidStudioProjects/jetpack_sample/ui_common/src/main/res/font/roboto_bold.xml" value="0.15648148148148147" />
       </map>
     </option>
   </component>
